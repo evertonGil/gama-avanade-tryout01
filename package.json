@@ -3,20 +3,24 @@
   "version": "1.0.0",
   "description": "Primeiro simulado para testar suas habilidades de HTML, CSS e Javascript do programa Avanade Angular Academy By Gama",
   "main": "test.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "canvas": "^1.6.7",
+    "canvas-prebuilt": "^1.6.5-prerelease.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-less": "^3.3.2",
     "mocha": "^4.0.1",
     "resemblejs": "^2.5.0",
-    "wdio-mocha-framework": "^0.5.11",
-    "webdriverio": "^4.9.11",
     "wdio-chromedriver-service": "~0.1",
-    "canvas": "^1.6.7",
-    "canvas-prebuilt": "^1.6.5-prerelease.1"
+    "wdio-mocha-framework": "^0.5.11",
+    "webdriverio": "^4.9.11"
   },
   "scripts": {
     "test": "./node_modules/.bin/wdio wdio.conf.js",
-    "start": "node server.js 8080"
+    "start": "node server.js 8080",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",

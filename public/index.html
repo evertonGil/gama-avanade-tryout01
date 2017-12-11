@@ -5,14 +5,90 @@
 	<meta charset="utf-8">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+
 </head>
 <body>
-<main role="main" id="main"></main>
+<main role="main" id="main">
+	<section class="banner-main">
+		<div class="container">
+			<h1>Dê propósito para seu código</h1>
+			<p>Cansado de desenvolver projetos sem sentido? Participe do Avanade Angular Academy</p>
+			<button  type="button" class="btn btn-success" id="btn-apply-form" data-toggle="modal" data-target="#exampleModalLong" >Inscreva-se</button>
+		</div>
+	</section>
+	<section class="information">
+		<div class="row">
+			<div class="col-md-3">
+				<h3>
+					Inscrições
+					<small class="">02/dez a 04/jan</small>
+				</h3>
+				<p>Para se inscrever basta preencher o formulário e se preparar para o nosso teste técnico com cursos online e</p>
+			</div>
+			<div class="col-md-3">
+				<h3>
+					Teste técnico
+					<small>05 e 06/jan</small>
+				</h3>
+				<p>Em seguida, prove que você está preparado fazendo os testes técnicos totalmente mão na massa.</p>
+			</div>
+			<div class="col-md-3">
+				<h3>
+					Seleção e Concentração
+					<small>07/jan a 14/jan</small>
+				</h3>
+				
+				<p>Os melhores candidatos serão entrevistados e contratados pela Avanade.</p>
+			</div>
+			<div class="col-md-3">
+				<h3>
+					Treinamento
+					<small>15/jan a 16/jan</small>
+				</h3>
+				<p>Serão duas semanas de treinamento super hands-on com os melhores devs do mercado.</p>
+			</div>
+		</div>
+	</section>
+</main>
+
+
+<div class="modal" id="apply-modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title">Inscrição</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form class="form-group" >
+					<div class="form-row form-group">	
+						<label for="name" class="col" >Nome</label>
+						<input type="text" name="name" id="name" class="col form-control" required/>
+					</div>
+					<div class="form-row">
+						<label for="email" class="col">E-mail</label>
+						<input type="email" name="email" id="email" class="col form-control" required/>
+					</div>
+					<button id="btn-apply" class="btn btn-success">Inscrever-se</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="../js/inscricao.js"></script>
+
 </body>
 </html>
