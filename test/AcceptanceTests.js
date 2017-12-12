@@ -30,9 +30,9 @@ describe('Tryout#1 - ', function() {
 			browser.url(url);
 			browser.click('#btn-apply-form');
 			browser.waitForVisible('#apply-modal');
-			browser.element('#name').setValue("ACME")
-			browser.element('#email').setValue("acme@gama.academy")
-			browser.click('#btn-apply')
+			browser.element('#name').setValue("ACME");
+			browser.element('#email').setValue("acme@gama.academy");
+			browser.click('#btn-apply');
 			browser.waitForVisible('#apply-success');
 		})
 
@@ -40,7 +40,7 @@ describe('Tryout#1 - ', function() {
 			browser.url(url);
 			browser.click('#btn-apply-form');
 			browser.waitForVisible('#apply-modal');
-			browser.click('#btn-apply')
+			browser.click('#btn-apply');
 			browser.waitForVisible('#apply-error');
 			assert.equal("Não pode estar vazio", browser.element('#feedback-name').getText());
 			assert.equal("Não pode estar vazio\nNão é válido", browser.element('#feedback-email').getText());
@@ -59,7 +59,10 @@ function layoutTestRunner(assertion_file, width, height) {
 	var screenshotName = './screenshot-' + assertion_file
 	browser.saveScreenshot(screenshotName);
 	var os = process.platform;
-	var diff = resemble(fs.readFileSync(screenshotName)).compareTo(fs.readFileSync('./test/' + os + "-" + assertion_file)).onComplete(function(data) {
+	var diff = resemble(fs.readFileSync(screenshotName))
+		.compareTo(fs.readFileSync('./test/' + os + "-" + assertion_file))
+		.ignoreAntialiasing()
+		.onComplete(function(data) {
 		if (data.rawMisMatchPercentage > 0) {
 	        fs.writeFileSync('./diff-' + path.basename(assertion_file) + '.png', data.getBuffer());
 		}

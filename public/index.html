@@ -5,9 +5,14 @@
 	<meta charset="utf-8">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+    <style type="text/css">
+	    #main{
+	    }
+    </style>
+    <link href="/css/style.css" rel="stylesheet" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet" crossorigin="anonymous">
 
 </head>
 <body>
@@ -65,14 +70,24 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<form class="form-group" >
-					<div class="form-row form-group">	
-						<label for="name" class="col" >Nome</label>
-						<input type="text" name="name" id="name" class="col form-control" required/>
+
+				<div id="apply-error" class="alert alert-danger">Corrija os campos</div>
+				<div id="apply-success" class="alert alert-success">Inscrição concluida com sucesso!</div>
+
+				<form id="formulario" class="form-group" novalidate="">
+					<div class="form-group">	
+						<label for="name" class="" >Nome</label>
+						<input type="text" name="name" id="name" class=" form-control" required/>
+						<div id="feedback-name" class="invalid-feedback">Não pode estar vazio</div>
 					</div>
-					<div class="form-row">
-						<label for="email" class="col">E-mail</label>
-						<input type="email" name="email" id="email" class="col form-control" required/>
+					<div class="form-group">
+						<label for="email" class="">E-mail</label>
+						<input type="email" name="email" id="email" class=" form-control" required/>
+						<div id="feedback-email" class="invalid-feedback">
+							Não pode estar vazio
+							<br>
+							Não é válido
+						</div>
 					</div>
 					<button id="btn-apply" class="btn btn-success">Inscrever-se</button>
 				</form>
@@ -88,7 +103,7 @@
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-<script src="../js/inscricao.js"></script>
+<script src="/js/inscricao.js"></script>
 
 </body>
 </html>

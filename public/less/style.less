@@ -13,20 +13,40 @@ body::-webkit-scrollbar {
     width:0px
 }
 
+#main{
+	display: block;
+}
 .banner-main{
-	background-image: url("../img/background-main.jpg");
-	background-position: center left;
 	color: #fff;
 	text-align: center;
 	padding: 63px 0 80px 0;
+	position: relative;
 
 	@media (max-width: 376px){
 		padding: 30px 0 42px 0;
 	}
-
+	:before{
+		display: block;
+		content: "";
+		position: absolute;
+		z-index: -1;
+		background-image: url("../img/background-main.jpg");
+		background-position: center left; 
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+ 
+		-webkit-filter: contrast(113%) brightness(87%);
+		filter: contrast(113%) brightness(87%);
+	}
+	.container{ 
+		-webkit-filter: contrast(100%) brightness(100%);
+		filter: contrast(100%) brightness(100%);
+	}
 	h1{
 		font-family: 'Montserrat';
-		font-size: 2.5em;
+		font-size: 2.46em;
 		font-weight: 900;
 		text-transform: uppercase;
 
@@ -69,4 +89,14 @@ body::-webkit-scrollbar {
 		line-height: 1.48em;
 	}
 
+}
+.btn-success{
+	background-color: #259a35;
+}
+
+#apply-modal{
+
+	.alert{
+		display: none;
+	}
 }
