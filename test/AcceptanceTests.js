@@ -20,7 +20,7 @@ describe('Tryout#1 - ', function() {
 	    });
 
 	    it('O layout mobile deve ser igual ao gabarito', function () {
-	        layoutTestRunner("assertion-mobile.png", 376, 667)
+	        layoutTestRunner("assertion-mobile.png", 376, 627)
 	    });
 
 	});
